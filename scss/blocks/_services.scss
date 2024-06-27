@@ -1,3 +1,7 @@
+.services {
+    @include scrollTopMargin;
+}
+
 .services__title {
     max-width: 570px;
     margin-bottom: 40px;

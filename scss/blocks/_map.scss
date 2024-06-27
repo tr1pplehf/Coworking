@@ -1,3 +1,7 @@
+.map {
+    @include scrollTopMargin;
+}
+
 .map__title {
     margin-bottom: 20px;
 
@@ -8,11 +12,11 @@
 
 .map__desc {
     margin-bottom: 20px;
-    
+
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
-    
+
     line-height: 1.5;
 
     @include mobile {
@@ -21,10 +25,10 @@
     }
 }
 
-.map__img {
+.map__iframe {
     border-radius: 40px;
 
-    @include mobile {
-        border-radius: 20px;
-    }
+        @include mobile {
+            border-radius: 20px;
+        }
 }

@@ -23,6 +23,23 @@
     justify-content: space-between;
     column-gap: 30px;
     align-items: center;
+
+    &:hover:not(:focus-visible) {
+        opacity: 0.5;
+    }
+
+    &:active:not(:focus-visible) .topic__title {
+        color: #00ae6c;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline-offset: 1px;
+        outline: #005fcc auto 1px;
+    }
 }
 
 .topic__title {
@@ -43,15 +60,13 @@
 }
 
 .topic__content {
-    padding-top: 30px;
-    
-    // При открытие топика добавляется класс .topic__content--open к данному класу со свойством display: flex;
-    display: none;
+    max-height: 0;
 
-    flex-direction: column;
-    row-gap: 1em;
+
 
     line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
 
     // Подчеркивание ссылок в развернутом тексте
     a {
@@ -63,8 +78,11 @@
         padding-top: 13px;
         font-size: 14px;
     }
-}
 
-.topic__content--open {
-    display: flex;
+    &-padding {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+    }
 }

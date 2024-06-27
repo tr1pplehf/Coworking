@@ -3,8 +3,9 @@ a.btn-dark {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 80px;
-    background-color: #000;
+    text-align: center;
 
+    background-color: #000;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
@@ -13,6 +14,10 @@ a.btn-dark {
 
     &:hover {
         background-color: #333;
+    }
+
+    &--wide {
+        width: 100%;
     }
 }
 
